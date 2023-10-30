@@ -25,13 +25,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Salaries Data Viz</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Salaries Data Viz</a>
+    <a href="time.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Time Analysis</a>
+    <a href="skills.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Education & Skill Analysis</a>
+    <a href="remote.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Remote Analysis</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
   </div>
 </div>
 
@@ -46,52 +44,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Data Science Salaries</h1>
       <h2 class="w3-text-teal">Do you know your worth?</h2>
-      <p>Given the volatility of the economy and tech job market, particularly in recent years, it's important to stay informed of any changes and fluctuations in compensation. This data visualization tool is intended to give you, the data scientist, insight into what the state of the market is and how market rate has fluctuated in the last couple years (2021-2023). You can filter by country, year, experience level, company size, remote/hybrid/on-site, etc. In our "Breakdown by Skill" tab, you can also see which data science skills have the greatest impact on salary.<br>
-<br>
-To get started, click on a country in the tree map below!
+      <p>Given the volatility of the economy and tech job market, particularly in recent years, it's important to stay informed of any changes and fluctuations in compensation. This data visualization tool is intended to give you, the data scientist, insight into what the state of the market is and how market rate has fluctuated in the last couple years (2021-2023). Data filters of interest include: country, year, experience level, company size, remote/hybrid/on-site, etc.
 </p>
   </div>
 
   <div class="w3-row">
     <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">An Overview of the Available Data</h3>
+      <p>The treemap below displays all available salary data by country. The area of each square corresponds with the number of salary data points for each country and the color of each square corresponds to the median salary.
+        As you select each square, the line graph below will update to show a further break down of how the median and average salaries for that country fluctuate by year from 2021-2023. For deeper analysis & granularity, select one of the
+        Analysis tabs at the top of the page!
+      </p>
       <div class='tableauPlaceholder' id='viz1698099873768' style='position: relative'>
-        <noscript><a href='#'>
-        <img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dataexploration-cleandatasource&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript>
-        <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-          <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
-          <param name='name' value='dataexploration-cleandatasource&#47;Dashboard2' />
-          <param name='tabs' value='no' /><param name='toolbar' value='yes' />
-          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dataexploration-cleandatasource&#47;Dashboard2&#47;1.png' /> 
-          <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                
-          <script type='text/javascript'>                    
-            var divElement = document.getElementById('viz1698099873768');                    
-            var vizElement = divElement.getElementsByTagName('object')[0];                    
-            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) 
-              { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1127px';}                     
-            var scriptElement = document.createElement('script');                    
-              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-              vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-          </script>
-
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class='tableauPlaceholder' id='viz1698707136448' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview_16987070747440&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='overview_16987070747440&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview_16987070747440&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1698707136448');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
   </div>
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      
     </div>
   </div>
 
 
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
-      <h4>Footer</h4>
+      <h4>Data from <a href="https://www.kaggle.com/datasets/harishkumardatalab/data-science-salary-2021-to-2023">Kaggle</a>.</h4>
     </div>
 
     <div class="w3-container w3-theme-l1">
