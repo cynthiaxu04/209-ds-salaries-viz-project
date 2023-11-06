@@ -43,28 +43,81 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <img src="https://www.ischool.berkeley.edu/sites/default/files/berkeleyischool-logo-blue-med.png" alt="UC Berkeley School of Information"/>
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Analysis of Skills & Education</h1>
-      <p> This page focuses on the break-down of salary time trend for Data Scientists from three perspectives (Country, Experience Level, Company Size). It will consist two parts. The first part will look at the timely trend from country perspective and the second part will look at the trend from Experience Level as well as Company Size perspective individually and interactively via hover cross-filter. 
-</p>
+      <p> This page focuses on how certain technical skills combined with education level influence compensation rates. While the value of specific skills is highly dependent on the individual role, it's possible there are some skills
+        that are generally more valuable in data science. This tab is intended to help you figure out which skills you should be investing in the most. See the visualizations below!
+      </p>
   </div>
 
   <div class="w3-row">
 
     <div class="w3-twothird w3-container">
       <h3 class="w3-text-teal">Common Data Science Skills</h3>
-      <p>Certain technical skills are particularly valuable for data scientists. Below are a list of common data science skills and their descriptions. 
+      <p>Below for some of the most common data science skills and their descriptions. This list is by no means exhaustive or complete.
       </p>
-      <table style="width:100%">
+      <table style="width:100%; border-collapse: collapse;">
         <tr>
-          <th>Skill</th>
-          <th style="width:70%">Description</th>
+          <th style = "border-bottom: 1px solid black;"><b>Skill</b></th>
+          <th style="width:70%; border-bottom: 1px solid black;"><b>Description</b></th>
         </tr>
         <tr>
           <td style="text-align: center">Python</td>
           <td>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics</td>
         </tr>
         <tr>
+          <td style="text-align: center">Spark</td>
+          <td>Apache Spark is an open-source, distributed data processing framework designed for big data analytics and machine learning.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">AWS</td>
+          <td>Amazon Web Services (AWS) is a comprehensive cloud computing platform that provides a wide range of cloud-based services for businesses and developers.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Excel</td>
+          <td>Microsoft Excel is a spreadsheet application used for data analysis, calculation, and visualization, with a wide range of business and personal applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SQL</td>
+          <td>Structured Query Language (SQL) is a domain-specific language used for managing and querying relational databases.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SAS</td>
+          <td>SAS (Statistical Analysis System) is a software suite used for advanced analytics, business intelligence, and data management.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Keras</td>
+          <td>This is an open-source deep learning framework that provides an easy and high-level interface for designing and training neural networks.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">PyTorch</td>
+          <td>This is an open-source deep learning framework known for its flexibility and dynamic computation graph, widely used in research and machine learning applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Scikit-learn</td>
+          <td>This is a popular machine-learning library in Python that provides tools for data mining and data analysis.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">TensorFlow</td>
+          <td>TensorFlow is an open-source machine learning framework developed by Google, widely used for building and training deep learning models.</td>
+        </tr>
+        <tr>
           <td style="text-align: center">Hadoop</td>
-          <td>blah</td>
+          <td>This is an open-source framework used for distributed storage and processing of large datasets, especially in big data applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Tableau</td>
+          <td>This is a data visualization tool that allows users to create interactive and shareable dashboards and reports from various data sources.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">BI</td>
+          <td>Business Intelligence (BI) refers to technologies, processes, and tools for collecting, analyzing, and presenting data to support decision-making in business.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Apache Flink</td>
+          <td>This is an open-source stream processing framework designed for real-time data processing and analytics.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">MonboDB</td>
+          <td>This is a NoSQL database management system that stores data in flexible, JSON-like documents and is widely used for scalable and high-performance applications.</td>
         </tr>
       </table>
     </div>
@@ -72,17 +125,26 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h3 class="w3-text-teal">Bar Chart</h3>
-      <p>These graphs will be able to check time trend of DS salary by Experience Level and Company Size both individually and interactively via hovering cross-filter. The colors represent different countries and Company Size accordingly on each visualization. The size of the squares represent the volume of job reported. You can filter the countries to see the trend of a specific country and the default value was set to “US” + “CA”</p>
-      <div class='tableauPlaceholder' id='viz1698113143862' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dataexploration-cleandatasource&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='dataexploration-cleandatasource&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dataexploration-cleandatasource&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1698113143862');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
+      <h3 class="w3-text-teal">Do more skills = more money?</h3>
+      <p>This figure shows as the number of skills required increases, the median average data scientist salary increases as well.
+      </p>
+      <img src="Bar_Chart.png" alt="Bar" width="616" height="417">
+      </div>
   </div>
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h3 class="w3-text-teal">Confusion Matrix</h3>
-      <p>These graphs will be able to check time trend of DS salary by Experience Level and Company Size both individually and interactively via hovering cross-filter. The colors represent different countries and Company Size accordingly on each visualization. The size of the squares represent the volume of job reported. You can filter the countries to see the trend of a specific country and the default value was set to “US” + “CA”</p>
-      
+      <h3 class="w3-text-teal">What combination of skills will yield the greatest increase in salary?</h3>
+      <p>The analysis of median average salaries for various skill combinations based on degree level provides valuable insights into the job market's demand for specific expertise. Overall, the choice of skills and the corresponding degree level can significantly influence salary expectations in the dynamic job market, and a keen understanding of these dynamics can help individuals make informed career decisions and achieve their salary goals.</p>
+
+      <div class="filter-menu">
+        <button onclick="showImage('masters')">Masters</button>
+        <button onclick="showImage('phd')">PhD</button>
+      </div>
+      <div class="image-container">
+        <img src="Master_Degree.png" alt="Masters" id="masters" style="display: block;">
+        <img src="PhD_Degree.png" alt="PhD" id="phd" style="display: none;">
+      </div>
     </div>
   </div>
 
@@ -95,6 +157,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </div>
   </footer>
+
+
+  <script>
+    function showImage(imageId) {
+      const images = document.querySelectorAll('.image-container img');
+      images.forEach(image => {
+        if (image.id === imageId) {
+          image.style.display = 'block';
+        } else {
+          image.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 <!-- END MAIN -->
 </div>
