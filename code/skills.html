@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Data Viz of Data Science Salaries</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Salaries Data Viz</a>
+    <a href="time.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Time Analysis</a>
+    <a href="skills.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Education & Skill Analysis</a>
+    <a href="remote.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Remote Analysis</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <img src="https://www.ischool.berkeley.edu/sites/default/files/berkeleyischool-logo-blue-med.png" alt="UC Berkeley School of Information"/>
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Analysis of Skills & Education</h1>
+      <p> This page focuses on how certain technical skills combined with education level influence compensation rates. While the value of specific skills is highly dependent on the individual role, it's possible there are some skills
+        that are generally more valuable in data science. This tab is intended to help you figure out which skills you should be investing in the most. See the visualizations below!
+      </p>
+  </div>
+
+  <div class="w3-row">
+
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Common Data Science Skills</h3>
+      <p>Below for some of the most common data science skills and their descriptions. This list is by no means exhaustive or complete.
+      </p>
+      <table style="width:100%; border-collapse: collapse;">
+        <tr>
+          <th style = "border-bottom: 1px solid black;"><b>Skill</b></th>
+          <th style="width:70%; border-bottom: 1px solid black;"><b>Description</b></th>
+        </tr>
+        <tr>
+          <td style="text-align: center">Python</td>
+          <td>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Spark</td>
+          <td>Apache Spark is an open-source, distributed data processing framework designed for big data analytics and machine learning.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">AWS</td>
+          <td>Amazon Web Services (AWS) is a comprehensive cloud computing platform that provides a wide range of cloud-based services for businesses and developers.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Excel</td>
+          <td>Microsoft Excel is a spreadsheet application used for data analysis, calculation, and visualization, with a wide range of business and personal applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SQL</td>
+          <td>Structured Query Language (SQL) is a domain-specific language used for managing and querying relational databases.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SAS</td>
+          <td>SAS (Statistical Analysis System) is a software suite used for advanced analytics, business intelligence, and data management.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Keras</td>
+          <td>This is an open-source deep learning framework that provides an easy and high-level interface for designing and training neural networks.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">PyTorch</td>
+          <td>This is an open-source deep learning framework known for its flexibility and dynamic computation graph, widely used in research and machine learning applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Scikit-learn</td>
+          <td>This is a popular machine-learning library in Python that provides tools for data mining and data analysis.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">TensorFlow</td>
+          <td>TensorFlow is an open-source machine learning framework developed by Google, widely used for building and training deep learning models.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Hadoop</td>
+          <td>This is an open-source framework used for distributed storage and processing of large datasets, especially in big data applications.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Tableau</td>
+          <td>This is a data visualization tool that allows users to create interactive and shareable dashboards and reports from various data sources.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">BI</td>
+          <td>Business Intelligence (BI) refers to technologies, processes, and tools for collecting, analyzing, and presenting data to support decision-making in business.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Apache Flink</td>
+          <td>This is an open-source stream processing framework designed for real-time data processing and analytics.</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">MonboDB</td>
+          <td>This is a NoSQL database management system that stores data in flexible, JSON-like documents and is widely used for scalable and high-performance applications.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Do more skills = more money?</h3>
+      <p>This figure shows as the number of skills required increases, the median average data scientist salary increases as well.
+      </p>
+      <img src="Bar_Chart.png" alt="Bar" width="616" height="417">
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">What combination of skills will yield the greatest increase in salary?</h3>
+      <p>The analysis of median average salaries for various skill combinations based on degree level provides valuable insights into the job market's demand for specific expertise. Overall, the choice of skills and the corresponding degree level can significantly influence salary expectations in the dynamic job market, and a keen understanding of these dynamics can help individuals make informed career decisions and achieve their salary goals.</p>
+
+      <div class="filter-menu">
+        <button onclick="showImage('masters')">Masters</button>
+        <button onclick="showImage('phd')">PhD</button>
+      </div>
+      <div class="image-container">
+        <img src="Master_Degree.png" alt="Masters" id="masters" style="display: block;">
+        <img src="PhD_Degree.png" alt="PhD" id="phd" style="display: none;">
+      </div>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Data from <a href="https://www.kaggle.com/datasets/nikhilbhathi/data-scientist-salary-us-glassdoor">Kaggle</a>.</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+
+  <script>
+    function showImage(imageId) {
+      const images = document.querySelectorAll('.image-container img');
+      images.forEach(image => {
+        if (image.id === imageId) {
+          image.style.display = 'block';
+        } else {
+          image.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+

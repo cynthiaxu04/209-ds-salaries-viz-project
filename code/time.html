@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Data Viz of Data Science Salaries</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+.tables-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space tables horizontally */
+  width: 100%; /* Full width of the container */
+}
+
+/* Style for individual tables */
+.side-by-side {
+  width: 45%; /* Adjust width as needed */
+  margin-bottom: 20px; /* Space between tables */
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Salaries Data Viz</a>
+    <a href="time.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Time Analysis</a>
+    <a href="skills.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Education & Skill Analysis</a>
+    <a href="remote.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Remote Analysis</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <img src="https://www.ischool.berkeley.edu/sites/default/files/berkeleyischool-logo-blue-med.png" alt="UC Berkeley School of Information"/>
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Analysis of Time Trends</h1>
+      <p> This tab focuses on the break-down of salary time trend for Data Scientists from three perspectives: Country, Experience Level, Company Size. 
+        The first part looks at the time trend by country.
+        The second part looks at the time trend by experience level and company size both individually and interactively via click and select cross-filter. 
+</p>
+  </div>
+
+  <div class="w3-row">
+
+    <div class="w3-twothird w3-container" style="margin-top: 25px;">
+      <h2 class="w3-text-teal">Time Trend by Country</h2>
+      <p>This section focuses on the checking the yearly trend for each country. The colors represent different countries with pre-filtering to show countries with over 50 jobs reported in total.
+        The size of the squares represent the number of jobs reported. 
+        The user can filter by country to see the trend of a specific country or leave the countries as “All” to compare the time trend for all major countries.  
+      </p>
+      <div class='tableauPlaceholder' id='viz1699307473895' style='position: relative'><noscript><a href='#'><img alt='Median Data Scientist Salary By Country ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tab2-1_16992915746290&#47;ByCountry1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Tab2-1_16992915746290&#47;ByCountry1?:language=en-US&amp;:embed=true&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tab2-1_16992915746290&#47;ByCountry1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699307473895');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+    </div>
+  </div>
+
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h2 class="w3-text-teal">Time Trend by Experience & Company Size</h2>
+      <p>These graphs check the time trend of DS salaries by Experience Level and Company Size both individually and interactively via a select & click cross-filter.
+         The colors represent different experience levels and company sizes accordingly on each visualization. 
+         The size of the squares represent the number of jobs reported. You can filter the countries to see the trend of a specific country.
+         The default country values are set to “US” + “CA”</p>
+
+    </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h4 class="w3-text-teal">Use Case 1: Check time trend from Experience & Company Size separately</h4>
+      <p>Action: Leave the dashbaord alone without clicking on anything analyze each visualization separately.</p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h4 class="w3-text-teal">Use Case 2: Users know their experience level and want to know what company size to join or switch to</h4>
+      <p>Action: Click on an experience level on the first viz, and the second viz will be cross filtered to reflect the salary trend for different company size for that experience level.</p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h4 class="w3-text-teal">Use Case 3: User wants to check growth trend for a current or future level for their company size (L, M, S)</h4>
+      <p>Action: Click on a company size on the second vis and the first vis will reflect the salary trend for each experience level for that selected company size.</p>
+
+    <!-- Tables placed horizontally -->
+    <div class="tables-container">
+      <table class="side-by-side" style="border-collapse: collapse;">
+        <!-- Table 1 content -->
+        <tr>
+          <th style = "border-bottom: 1px solid black;"><b>Experience Level</b></th>
+          <th style="width:100%; border-bottom: 1px solid black;"><b>Description</b></th>
+        </tr>
+        <tr>
+          <td style="text-align: center">EN</td>
+          <td style="text-align: center">Entry-level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">MI</td>
+          <td style="text-align: center">Mid-level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SE</td>
+          <td style="text-align: center">Senior level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">EX</td>
+          <td style="text-align: center">Executive level</td>
+        </tr>
+      </table>
+      <table class="side-by-side" style="border-collapse: collapse;">
+        <!-- Table 2 content -->
+        <tr>
+          <th style = "border-bottom: 1px solid black;"><b>Company Size</b></th>
+          <th style="width:100%; border-bottom: 1px solid black;"><b>Description</b></th>
+        </tr>
+        <tr>
+          <td style="text-align: center">S</td>
+          <td style="text-align: center">Small (less than 50 employees)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">M</td>
+          <td style="text-align: center">Medium (50 - 240 employees)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">L</td>
+          <td style="text-align: center">Large (greater than 250 employees)</td>
+        </tr>
+      </table>
+    </div>
+
+      <br> 
+      <div class='tableauPlaceholder' id='viz1699307510109' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tab2-2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Tab2-2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ta&#47;Tab2-2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699307510109');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+  </div>
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32", style="margin-top: 50px;">
+      <h4>Data from <a href="https://www.kaggle.com/datasets/harishkumardatalab/data-science-salary-2021-to-2023">Kaggle</a>.</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
