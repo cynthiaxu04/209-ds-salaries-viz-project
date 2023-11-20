@@ -17,6 +17,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   bottom: 0;
   height: inherit;
 }
+.tables-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space tables horizontally */
+  width: 100%; /* Full width of the container */
+}
+
+/* Style for individual tables */
+.side-by-side {
+  width: 45%; /* Adjust width as needed */
+  margin-bottom: 20px; /* Space between tables */
+  border-collapse: collapse;
+}
 </style>
 </head>
 <body>
@@ -29,7 +41,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a href="time.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Time Analysis</a>
     <a href="skills.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Education & Skill Analysis</a>
     <a href="remote.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Remote Analysis</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   </div>
 </div>
 
@@ -43,10 +55,60 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <img src="https://www.ischool.berkeley.edu/sites/default/files/berkeleyischool-logo-blue-med.png" alt="UC Berkeley School of Information"/>
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Analysis of Remote Job Opportunities</h1>
-      <p>This plot shows the average salary per geographical area (US vs RoW) for each job band. The size of the boxes represent the salary. The 4 text for each box are: the average salary, the count of jobs, the job band and the region respectively.
+      <p>This plot shows the average salary per geographical area (US vs RoW) for each job band. 
+        The size of the rectangles represent the mean salary. 
+        The 4 text for each box are: the average salary, the count of jobs, the job band and the region respectively.
         <br>
         <br>
         Below it is a more detailed view of the available jobs within each block. It dynamically changes based on which block is clicked within the treemap.</p>
+
+      <!-- Tables placed horizontally -->
+    <div class="tables-container">
+      <table class="side-by-side" style="border-collapse: collapse;">
+        <!-- Table 1 content -->
+        <tr>
+          <th style = "border-bottom: 1px solid black;"><b>Ratio of Remote Work</b></th>
+          <th style="width:100%; border-bottom: 1px solid black;"><b>Description</b></th>
+        </tr>
+        <tr>
+          <td style="text-align: center">0</td>
+          <td style="text-align: center">No remote work (less than 20%)</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">50</td>
+          <td style="text-align: center">Partially remote</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">100</td>
+          <td style="text-align: center">Fully remote (more than 80%)</td>
+        </tr>
+      </table>
+      <table class="side-by-side" style="border-collapse: collapse;">
+        <!-- Table 2 content -->
+        <tr>
+          <th style = "border-bottom: 1px solid black;"><b>Experience Level</b></th>
+          <th style="width:100%; border-bottom: 1px solid black;"><b>Description</b></th>
+        </tr>
+        <tr>
+          <td style="text-align: center">EN</td>
+          <td style="text-align: center">Entry-level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">MI</td>
+          <td style="text-align: center">Mid-level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">SE</td>
+          <td style="text-align: center">Senior level</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">EX</td>
+          <td style="text-align: center">Executive level</td>
+        </tr>
+      </table>
+    </div>
+
+      <br> 
         <div class='tableauPlaceholder' id='viz1699237798334' style='position: relative'><noscript><a href='#'><img alt='Draft Dash ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;95&#47;95D4KXRZ2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;95D4KXRZ2' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;95&#47;95D4KXRZ2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1699237798334');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1200px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1200px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   </div>
 
